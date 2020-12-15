@@ -58,11 +58,12 @@
     border:1px solid gray;
 }
 .completed{
-    text-decoration:line-through;
+    color:rgb(151, 204, 71);
 }
 .inProgress{
-    text-decoration: underline;
+    color: rgb(228, 159, 11);
 }
+
 .deadLine{
 color: red;
 }

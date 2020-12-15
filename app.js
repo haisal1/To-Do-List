@@ -82,7 +82,7 @@ const addElements = (id, text, status) => {
     text=text.slice(0,77);
     text=text.concat("...");
 showLessMore="showLessMore";
-show=`<span id="${id}" job="showLessMore"> ShowMore</span>`;
+show=`<span id="${id}" job="showLessMore" class="showMoreLess"> ShowMore</span>`;
     }
     if (status == "notStarted") {
         pStatus = "notStarted";
@@ -111,7 +111,7 @@ show=`<span id="${id}" job="showLessMore"> ShowMore</span>`;
     }
     let item = `<li id="${id}" class="inputedContent" job="">
     <input id="${id}" type="checkbox" class="checkBox" job="">
-    <input id="${id}" type="text" class="hiddenEdit" job="">
+    <input id="${id}" type="text" class="hiddenEdit" job="" maxlength="250">
     <p id="${id}" job="showTime" class="itemContent ${pStatus} ${showLessMore}">${text}${show}</p>
     <p id=${id} job="" class="timerShow"></p>
             <div class="itemButtons" job="">    
@@ -208,10 +208,11 @@ inputNewText.forEach(element=>element.addEventListener("keyup",function(event){
         let inputNewTextId=inputNewText[event.target.id];
         if(event.key=="Enter"){
             if(event.target.value){
-                id=element.id;
-                showLess=`<span id="${id}" job="showLessMore"> ShowLess</span>`;
-        showMore=`<span id="${id}" job="showLessMore"> ShowMore</span>`;
-                itemTextId.innerHTML=event.target.value.slice(0,77).concat(`...`).concat(showMore);
+                index=element.id;
+        showMore=`<span id="${index}" job="showLessMore" class="showMoreLess"> ShowMore</span>`;
+        if(event.target.value.length>80){
+                itemTextId.innerHTML=event.target.value.slice(0,77).concat(`...`).concat(showMore);}
+                else{itemTextId.innerHTML=event.target.value}
         itemTextId.style.display="inline";
         inputNewTextId.style.display="none";
         List[event.target.id].text=event.target.value;
@@ -227,9 +228,9 @@ inputNewText.forEach(element=>element.addEventListener("keyup",function(event){
     //////// Show less Show more /////////////////
 
     const showLessMore=(element)=>{
-        id=element.id;
-        showLess=`<span id="${id}" job="showLessMore"> ShowLess</span>`;
-        showMore=`<span id="${id}" job="showLessMore"> ShowMore</span>`;
+        index=element.id;
+        showLess=`<span id="${index}" job="showLessMore" class="showMoreLess"> ShowLess</span>`;
+        showMore=`<span id="${index}" job="showLessMore" class="showMoreLess"> ShowMore</span>`;
         if(element.innerText==" ShowMore"){
             element.parentNode.innerHTML=List[element.id].text.concat(showLess)
         }else{
