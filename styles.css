@@ -58,14 +58,16 @@
     border:1px solid gray;
 }
 .completed{
-    color:rgb(151, 204, 71);
+    background-color: rgba(151, 204, 71, 0.2);
 }
 .inProgress{
-    color: rgb(228, 159, 11);
+    background-color: rgba(228, 159, 11, 0.2);
 }
-
+.showMoreLess{  
+        text-shadow:2px 2px rgba(0, 0, 0, 0.185);
+}
 .deadLine{
-color: red;
+background-color: rgba(179, 41, 41, 0.2);
 }
 .checkBox{
     margin:0 1vw;
