@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: linear-gradient(90deg, #532d87 0%, #66408cdf 71%);
+}
+.header{
+    font-size: 15px;
+    cursor: default;
+    text-shadow:4px 4px 3px purple;
+    color: white;
+}
+.headerTitle{
+    text-align: center;
+    padding-top: 4vh ;
+    font-size: 2rem;
+}
+.headerContent{
+     margin-left: 2%;
+}
+.filterSelector{
+    border: none;
+    color: purple;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+.headerButtons{
+    margin-top: 1.5vh;
+    margin-right: 1vw;
+    font-weight: 900;
+    padding-bottom: 1vh;
+}
+.headerDelete{
+    margin-left: 1vw;
+    cursor: pointer;
+}
+.headerClear{
+    margin-left: 1vw;
+    cursor: pointer;
+}
+.contain {
+    overflow: auto; 
+      height: 72vh;
+      width: 95vw;
+      margin:0 auto;
+}
+
+.inputedContent{
+    background-color: white;
+    display:flex;
+    color: purple;
+    align-items: center;
+    border:1px solid gray;
+}
+.completed{
+    text-decoration:line-through;
+}
+.inProgress{
+    text-decoration: underline;
+}
+.deadLine{
+color: red;
+}
+.checkBox{
+    margin:0 1vw;
+}
+.itemContent{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    width: 80vw;
+    font-weight: bold;
+    padding: 1vh 0;
+    cursor: default;
+}
+
+.hiddenEdit{
+    display: none;
+    color: purple;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    width: 80vw;
+    font-weight: bold;
+    padding: 1vh 0;
+}
+.displayBlock{
+    display:inline;
+}
+.timerShow{
+    display: none;
+    width: 20vw;
+}
+.itemButtons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2vw;
+}
+.itemSelector{
+    border: none;
+    color: purple;
+    cursor: pointer;
+}
+.deleteButton,.editButton{
+    margin-left: 1vw;
+    cursor: pointer;
+}
+.footer{
+    width: 98%;
+    padding: 1%;    
+}
+#addDataForm{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.submit{
+    width: 10%;
+    padding-right:1% ;
+    padding-left: 1%;
+    background-color: white;
+    font-size: 15px;
+    color: purple;
+    border: purple double;
+
+}
+.addToDo{
+    width: 40%;
+    background: transparent;
+    border-style: none;
+    color:purple;
+       background-color: white;
+}
+.addToDo::placeholder{
+    color: purple;
+    text-align: center;
+}
+.deadlineData{
+    background: transparent;
+    border-style: none;
+    color: white;
+     background-color: transparent;
+}
+.deadlineData::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+  }
+.deadlineTime::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+  }
+.deadlineTime{
+    background: transparent;
+    border-style: none;
+   color: white;
+   background-color:transparent;
+}
+.expire{
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent ;
+  }
+  ::-webkit-scrollbar-thumb {
+    background:purple;
+  } 
+
+  @media only screen and (max-width:760px){
+    .inputedContent{
+        flex-direction: column;
+    }
+    .itemButtons{
+justify-content: space-between; 
+    }
+    .itemContent{
+        width:90vw;
+        text-align: center;
+    }
+    .timerShow{
+        width: auto;
+    }
+    .checkBox{
+        margin-top: 2vh;
+    }
+    #addDataForm{
+          flex-direction: column;
+      }
+      
+      .addToDo{
+          width: 100%;
+          overflow: auto;
+      }
+  }

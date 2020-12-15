@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha512-9BwLAVqqt6oFdXohPLuNHxhx36BVj5uGSGmizkmGkgl3uMSgNalKc/smum+GJU/TTP0jy0+ruwC3xNAk3F759A=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3 class="headerTitle">To Do List</h3>
+            <div class="headerContent">
+            <h5 id="headerClock"></h5>
+            <h5 id="headerDate"></h5>
+             <span>Filter: </span><select class="filterSelector" name="filterAll">
+                    <option class="filterOption" value="all">All</option>
+                    <option class="filterOption" value="filterNotStarted">not started</option>
+                    <option class="filterOption" value="filterInProgress">in progress</option>
+                    <option class="filterOption" value="filterCompleted">completed</option>
+                    <option class="filterOption" value="filterExpired">expired</option>
+                </select>
+            <div class="headerButtons">
+                <h5 class="fa fa-trash-alt headerDelete"> Delete items</h5>
+                <h5 class="fa fa-recycle headerClear" > Clear All</h5>
+        </div>
+        </div>
+        </div>
+        <div class="contain">
+            <ul id="items" class="items">
+        </ul>
+        </div>
+        <div class="footer">
+            <form id="addDataForm">
+                <button class="submit" type="submit">&#43</button>
+                <input id="addToDo" class="addToDo" type="text" placeholder="Add To Do" maxlength="150" required>
+                <div>
+                <label class="expire">Expire Date:</label>
+                <input type="date" id="deadlineData" class="deadlineData" required>
+            </div>
+            <div>
+                <label class="expire">Expire Time:</label>
+                <input type="time" id="deadlineTime" class="deadlineTime" required></div>
+            </form>
+        </div>
+    </div>
+    <script src="./app.js" type="text/javascript"></script>
+</body>
+</html>
